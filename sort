@@ -1,0 +1,22 @@
+class Solution {
+    public int[] sortArrayByParityII(int[] A) 
+    {
+        int even=0,odd=1;
+        while(even<A.length&&odd<A.length)
+        {
+            if(A[even]%2==1)
+            {
+                int temp=A[even];
+                A[even]=A[odd];
+                A[odd]=temp;
+                odd=odd+2;
+            }
+            else
+            {
+                even=even+2;
+            }
+            }
+        
+       return A; 
+    }
+}
